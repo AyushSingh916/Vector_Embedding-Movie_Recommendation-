@@ -1,12 +1,12 @@
 import pymongo
 import requests
 
-client = pymongo.MongoClient("mongodb+srv://ayush_singh_916:inVjz9qFeXLogq67@cluster0.vgfmmoj.mongodb.net/")
+client = pymongo.MongoClient("")
 db = client.sample_mflix
 collection = db.movies
 
 API_URL = "https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer <hugging_face_token>"}
 
 def generate_embedding(text: str) -> list[float]:
     response = requests.post(API_URL, headers=headers, json={"inputs":text})

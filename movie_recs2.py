@@ -2,7 +2,7 @@ import pymongo
 import openai
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = ''
 
 client = pymongo.MongoClient("mongodb+srv://beau:n9KkbZz60mfMPhWM@cluster0.svcxhgj.mongodb.net/?retryWrites=true&w=majority")
 db = client.sample_mflix
